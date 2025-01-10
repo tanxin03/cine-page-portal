@@ -84,42 +84,7 @@
     position: relative;
 }
 
-.main-header {
-    width: 100%;
-    padding: 0;
-    height: 62px;
-    z-index: 9998;
-    top: 0;
-    left: 0;
-    position: absolute;
-    transition: background-color .2s;
-}
-.top-nav.fixed {
-    min-width: 1340px;
-    position: fixed;
-}
-.navbg {
-    background: linear-gradient(180deg, #00000080, #fff0);
-    background-color: #1c1d2ffa;
-}
-.top-nav-shadow{
-    padding: 0;
-    height: 62px;
-    width: 100%;
-    z-index: 3995;
-    top: 0;
-    left: 0;
-    position: absolute;
-}
-.top-nav-shadow.fixed {
-    position: fixed;
-}
 
-
-
-.main-header-wrapper {
-    height: 100%;
-}
 .page-slide-sup{
     position: relative;
 }
@@ -127,17 +92,6 @@
     .page-slide-sup .play-btn {
         bottom: 100px!important;
     }
-}
-
-.items {
-    margin-left: 80px;
-}
-
-.item {
-    margin: 0 20px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #ffffffb3;
 }
 
 .main-wrapper {

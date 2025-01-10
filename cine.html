@@ -5,21 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
   <title>腾讯视频云快直播示例</title>
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/css/common.css" rel="stylesheet">
+  <link href="./assets/css/cine.css" rel="stylesheet">
   <!-- 引入播放器 css 文件 -->
   <link href="https://web.sdk.cloud.tencent.cn/player/tcplayer/release/v4.5.0/tcplayer.min.css" rel="stylesheet">
 
   <!-- 引入播放器 js 文件 -->
   <script src="https://tcplayer.vcube.tencent.com/tcplayer/temp/tcplayer.v4.8.0.min.js"></script>
   <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.9.1/vconsole.min.js"></script>
+
   <!-- 示例 CSS 样式可自行删除 -->
   <style>
     html,body{
       margin: 0;
       padding: 0;
     }
-    .tcplayer {
-      margin: 0 auto;
+    body{
+      background-color: #0F0E1F;
     }
+    /* .tcplayer {
+      margin: 0 auto;
+    } */
     @media screen and (max-width: 640px) {
       .tcplayer,
       #player-container-id {
@@ -38,12 +45,10 @@
     }
     .play-box{
       position: relative;
-      margin-top: 20px;
     }
     .play-box .advise{
       width: 360px;
       height: 360px;
-      margin: auto;
       position: absolute;
       top: 0;
       left: 0;
@@ -59,17 +64,58 @@
   </style>
 </head>
 <body>
-
-<div class="play-box">
-  <video id="player-container-id" preload="auto" width="840" height="473" playsinline webkit-playsinline>
-  </video>
-  <div class="advise"><a target="_blank" href="https://www.baidu.com"><img style="width:100%;height:100%;" src="./assets/images/advise/advise.jpeg" alt=""></a></div>
+<div class="main-header-outer">
+  <header class="main-header top-nav fixed">
+      <div class="container main-header-wrapper d-flex">
+          <div class="main-header-left d-flex align-items-center">
+              <div>LOGO</div>
+              <div class="items d-flex align-items-center">
+                  <div class="item">首页</div>
+                  <div class="item">发现</div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <div class="top-nav-shadow fixed"></div>
 </div>
+<div class="main-content d-flex justify-content-center container">
+  <div class="main-content-wrapper d-flex">
+    <div class="main-content-wrapper-left">
+      <div class="play-box">
+        <video id="player-container-id" preload="auto" width="840" height="473" playsinline webkit-playsinline>
+        </video>
+        <div class="advise"><a target="_blank" href="https://www.baidu.com"><img style="width:100%;height:100%;" src="./assets/images/advise/advise.jpeg" alt=""></a></div>
+      </div>
+    </div>
+    <div class="main-content-wrapper-right">
+      <div class="main-content-wrapper-right-1 d-flex">
+        <div class="name">我是刑警</div>
+        <div class="detail">简介</div>
+        <div class="census">统计</div>
+      </div>
+      <div class="main-content-wrapper-right-2">
+        <div class="tags">
+          <span class="tag">犯罪</span>
+          <span class="tag">剧情</span>
+          <span class="tag">大陆</span>
+          <span class="tag">2024</span>
+        </div>
+        <div class="fire"><span >123568</span></div>
+        <div class="score">
+          <span >9.8</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
 
 
 <div class="button-container">
 </div>
 <script src="./assets/js/jquery.js"></script>
+<script src="./assets/js/index.js"></script>
 <script>
   if (TCPlayer.browser.IS_ANDROID || TCPlayer.browser.IS_IOS) {
     const vConsole = new VConsole({ maxLogNumber: 1000 });
